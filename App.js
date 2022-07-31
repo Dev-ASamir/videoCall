@@ -124,8 +124,9 @@ import styles from './components/Style';
 
 const config = {
   appId: '8c5085e6ffa64e7a95ce62270d81a687',
-  token: null, //'YourTokenOrNull',
-  channelName: 'test',
+  token:
+    '0068c5085e6ffa64e7a95ce62270d81a687IADP0+W3QUIIn8KRLQYLZbJydjZ4IzrVrsHGciq7rgGC8KsWLIoAAAAAEACGukDPhufnYgEAAQCE5+di',
+  channelName: 'lab system',
 };
 
 const App = () => {
