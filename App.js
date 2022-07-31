@@ -158,7 +158,8 @@ const App = () => {
       });
 
       _engine.current.addListener('Error', err => {
-        console.log('Error', err);
+        // console.log('Error', err);
+        alert(err);
       });
 
       _engine.current.addListener('UserJoined', (uid, elapsed) => {
