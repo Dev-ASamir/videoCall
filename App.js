@@ -102,6 +102,29 @@ const App = () => {
     setJoined(false);
   };
 
+  const cameraOff = async () => {
+    const res = await _engine.current?.disableVideo();
+
+    console.log('DDDDDDDD', res);
+  };
+
+  const cameraON = async () => {
+    const res = await _engine.current?.enableVideo();
+
+    console.log('DDDDDDDD', res);
+  };
+  const soundOff = async () => {
+    const res = await _engine.current?.disableAudio();
+
+    console.log('DDDDDDDD', res);
+  };
+
+  const soundOn = async () => {
+    const res = await _engine.current?.enableAudio();
+
+    console.log('DDDDDDDD', res);
+  };
+
   const _renderVideos = () => {
     return isJoined ? (
       <View style={styles.fullView}>
@@ -121,6 +144,24 @@ const App = () => {
         style={styles.remoteContainer}
         contentContainerStyle={styles.padding}
         horizontal={true}>
+        <View style={{padding: 20}}>
+          <View style={{flexDirection: 'row', alignSelf: 'flex-end'}}>
+            <TouchableOpacity onPress={cameraOff} style={styles.button}>
+              <Text style={styles.buttonText}> Camera Off </Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={cameraON} style={styles.button}>
+              <Text style={styles.buttonText}> Camera ON </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={{flexDirection: 'row', alignSelf: 'flex-end'}}>
+            <TouchableOpacity onPress={soundOn} style={styles.button}>
+              <Text style={styles.buttonText}> sound ON </Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={soundOff} style={styles.button}>
+              <Text style={styles.buttonText}> Mute </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
         {peerIds.map(value => {
           return (
             <RtcRemoteView.SurfaceView
