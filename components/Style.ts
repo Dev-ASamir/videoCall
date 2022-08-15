@@ -17,7 +17,7 @@ export default StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   button: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 14,
     paddingVertical: 10,
     backgroundColor: '#0093E9',
     borderRadius: 25,

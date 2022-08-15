@@ -12,7 +12,7 @@ import styles from './components/Style';
 const config = {
   appId: '8c5085e6ffa64e7a95ce62270d81a687',
   token:
-    '0068c5085e6ffa64e7a95ce62270d81a687IADe29s9SQ7MlcvHPobhCXXtZRqu+mMlNgrYCVszAb1KyqsWLIoAAAAAEACOhaHHiuTyYgEAAQCK5PJi',
+    '0068c5085e6ffa64e7a95ce62270d81a687IAB+Ijz5r16OTrGLaaAuVikP8oeQ7tDF94p1ic3LZVx18qsWLIoAAAAAEACLq5A0NEn6YgEAAQA0Sfpi',
   channelName: 'lab system ',
 };
 
@@ -144,17 +144,27 @@ const App = () => {
         style={styles.remoteContainer}
         contentContainerStyle={styles.padding}
         horizontal={true}>
-        <View style={{padding: 20}}>
+        <View style={{padding: 0}}>
           <View style={{flexDirection: 'row', alignSelf: 'flex-end'}}>
-            <TouchableOpacity onPress={cameraOff} style={styles.button}>
-              <Text style={styles.buttonText}> Camera Off </Text>
+            <TouchableOpacity
+              onPress={cameraON}
+              style={[styles.button, {marginHorizontal: 4}]}>
+              <Text style={[styles.buttonText]}>Camera ON</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={cameraON} style={styles.button}>
-              <Text style={styles.buttonText}> Camera ON </Text>
+            <TouchableOpacity onPress={cameraOff} style={styles.button}>
+              <Text style={[styles.buttonText]}>Camera Off</Text>
             </TouchableOpacity>
           </View>
-          <View style={{flexDirection: 'row', alignSelf: 'flex-end'}}>
-            <TouchableOpacity onPress={soundOn} style={styles.button}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignSelf: 'flex-start',
+
+              marginTop: 10,
+            }}>
+            <TouchableOpacity
+              onPress={soundOn}
+              style={[styles.button, {marginHorizontal: 4}]}>
               <Text style={styles.buttonText}> sound ON </Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={soundOff} style={styles.button}>
